@@ -243,3 +243,10 @@ Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: https://bestbuycanada.my.salesforce.com/embeddedservice/5.0/frame/broadcast.esw.min.js, line 3: TypeError: this.storage is undefined
+1609181269167	Marionette	INFO	Stopped listening on port 62184
+JavaScript error: https://bestbuycanada.my.salesforce.com/embeddedservice/5.0/frame/broadcast.esw.min.js, line 3: TypeError: this.storage is undefined
+JavaScript error: https://bestbuycanada.my.salesforce.com/embeddedservice/5.0/frame/broadcast.esw.min.js, line 3: TypeError: this.storage is undefined
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

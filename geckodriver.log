@@ -534,3 +534,16 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1609288606557	Marionette	INFO	Listening on port 50180
 1609288607064	Marionette	WARN	TLS certificate errors will be ignored for this session
 1609288633089	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1609289122575	Marionette	INFO	Stopped listening on port 50180
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1609375214732	geckodriver	INFO	Listening on 127.0.0.1:63516
+1609375217765	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\zourm\\AppData\\Local\\Temp\\rust_mozprofile9pWbQM"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609375221534	Marionette	INFO	Listening on port 63524
+1609375221924	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609375222312	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://www.walmart.ca/en/top-deals-in-electronics/N-33983/page-3 line 6 > injectedScript, line 2: TypeError: walmart.analytics.dataLayer is undefined
+JavaScript error: https://www.walmart.ca/en/top-deals-in-electronics/N-33983/page-3 line 6 > injectedScript, line 2: TypeError: walmart.analytics.dataLayer is undefined
+1609375472304	Marionette	INFO	Stopped listening on port 63524

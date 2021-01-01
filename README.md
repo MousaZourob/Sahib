@@ -1,5 +1,5 @@
 # Sahib
 Todo:
-- Complete selenium driver
-- Start webscraping
+- Get prices
+- Get image
 - Integrate twitter 

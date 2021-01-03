@@ -5,3 +5,4 @@ user_agent = 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firef
 page_load = 30
 
 twitter_login_page = 'https://twitter.com/login'
+twitter_cookies_path = 'twitter_cookies.json'

@@ -1,0 +1,103 @@
+from config import *
+from db import *
+
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+
+import pymongo
+import os
+
+from datetime import datetime 
+from time import sleep
+
+client = pymongo.MongoClient(f"mongodb+srv://{mongo_user}:{mongo_password}@{mongo_url}")
+db = client.walmart
+
+try:
+    current_path = os.path.dirname(os.path.abspath(__file__))
+except:
+    current_path = '.'
+    
+def get_url(page_url, driver):
+    driver.get(page_url)
+    
+    sleep(page_load)
+    close_popup = driver.find_elements_by_css_selector('.acsFocusFirst')
+    if len(close_popup) > 0:
+        close_popup[0].click()
+
+def get_products(driver):
+    products = driver.find_elements_by_css_selector('div.shelf-thumbs .standard-thumb')
+
+    products_info = []
+
+    for product in products:
+        # Get product title
+        product_title = ''
+        if len(product.find_elements_by_css_selector('div.product-details-container .details .title .thumb-header')) > 0:
+            product_title = product.find_elements_by_css_selector('div.product-details-container .details .title .thumb-header')[0].text
+
+        # Get product url
+        product_url = ''
+        if len(product.find_elements_by_css_selector('a.product-link')) > 0:
+            product_url = product.find_elements_by_css_selector('a.product-link')[0].get_attribute('href')
+
+        # Get product current price
+        current_price = 0
+        if len(product.find_elements_by_css_selector('div.product-details-container .all-price-sections .price-current')) > 0:
+            current_price = product.find_elements_by_css_selector('div.product-details-container .all-price-sections .price-current')[0].text
+            current_price = current_price.replace('\n', '')
+            current_price = current_price.replace('$', '')
+            current_price = current_price.replace(',', '')
+            if "to" in current_price:
+                current_price = current_price.split('.')
+                current_price = float(current_price[0])
+            current_price = float(current_price)
+
+        # Get product old price
+        old_price = 0
+        if len(product.find_elements_by_css_selector('div.product-details-container .all-price-sections .pricing-spacer .price-was')) > 0:
+            old_price = product.find_elements_by_css_selector('div.product-details-container .all-price-sections .pricing-spacer .price-was')[0].text
+            old_price = old_price.replace('$', '')
+            old_price = old_price.replace("Was ", "")
+            if len(old_price) > 0:
+                old_price = float(old_price)
+            else: 
+                old_price = 0
+
+        discount_number = 0
+        discount_percent = 0
+
+        if current_price != 0 and old_price != 0 and old_price > current_price:
+            discount_number = round(old_price - current_price)
+            discount_percent = round(100 - (current_price/old_price) * 100)
+
+        if current_price !=0 and len(product_url) > 0 and len(product_title) > 0:
+            product_info = {
+                'product_title': product_title,
+                'product_url': product_url,
+                'current_price': current_price,
+                'old_price': old_price,
+                'discount_number': discount_number,
+                'discount_percent': discount_percent,
+                'inserted_at': datetime.now(),
+                'updated_at': datetime.now(),
+                'published_at': False
+            }
+            
+            if db.products.count_documents({'$or': [ {'product_title': product_title}, {'product_url': product_url}]}) == 0:
+                _ = db.products.insert_one(product_info)
+            else:
+                pd = db.products.find_one({'$or': [ {'product_title': product_title}, {'product_url': product_url}]})
+                if pd['current_price'] != current_price or pd['old_price'] != old_price:
+                    db.products.update_one({'_id':  pd['_id']}, {'$set': {
+                                                                'current_price': current_price,
+                                                                'old_price': old_price,
+                                                                'discount_number': discount_number,
+                                                                'discount_percent': discount_percent,
+                                                                'updated_at': datetime.now()
+                                                            }} )
+                    
+            products_info.append(product_info)
+        
+    return products_info

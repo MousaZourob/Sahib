@@ -868,3 +868,25 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1609629665554	Marionette	INFO	Listening on port 52054
 1609629665894	Marionette	WARN	TLS certificate errors will be ignored for this session
 1609629672470	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1609632954447	Marionette	INFO	Stopped listening on port 52054
+1609699654291	geckodriver	INFO	Listening on 127.0.0.1:49288
+1609699657308	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\zourm\\AppData\\Local\\Temp\\rust_mozprofile72rJfU"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609699660549	Marionette	INFO	Listening on port 49296
+1609699660950	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609699673581	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1609699695089	Marionette	INFO	Stopped listening on port 49296
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1609699717626	geckodriver	INFO	Listening on 127.0.0.1:49776
+1609699720649	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\zourm\\AppData\\Local\\Temp\\rust_mozprofileEkePle"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609699722558	Marionette	INFO	Listening on port 49786
+1609699722678	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609699747896	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://www.walmart.ca/en/electronics/N-103, line 1429: TypeError: slider.reloadSlider is not a function
+1609699847671	Marionette	INFO	Stopped listening on port 49786
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

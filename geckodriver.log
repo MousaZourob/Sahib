@@ -1076,3 +1076,26 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
 1609726825120	Marionette	INFO	Listening on port 58567
 1609726825492	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609726908676	Marionette	INFO	Stopped listening on port 58567
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1609781205594	geckodriver	INFO	Listening on 127.0.0.1:52946
+1609781208640	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\zourm\\AppData\\Local\\Temp\\rust_mozprofileJef53Q"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609781212392	Marionette	INFO	Listening on port 52954
+1609781212769	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource:///modules/WindowsJumpLists.jsm, line 266: TypeError: this._builder is undefined
+1609783163413	Marionette	INFO	Stopped listening on port 52954
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1609783169662	geckodriver	INFO	Listening on 127.0.0.1:53134
+1609783172726	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\zourm\\AppData\\Local\\Temp\\rust_mozprofilezXLkq6"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609783175569	Marionette	INFO	Listening on port 53142
+1609783175877	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609783225718	Marionette	INFO	Stopped listening on port 53142
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

@@ -1,5 +1,7 @@
 from config import *
 from db import *
+import json
+from pathlib import Path
 
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
@@ -122,3 +124,54 @@ def get_products(driver):
             products_info.append(product_info)
         
     return products_info
+
+def load_cookies(driver):
+    driver.get(twitter_url)
+    cookies = ''
+    
+    cookie_file = f"{current_path}/{twitter_cookies_path}"
+    if Path(cookie_file).is_file():
+        with open(cookie_file, 'r', encoding = 'utf8') as ck_file:
+            cookies = ck_file.read()
+    
+    if cookies != '':
+        cookies = json.loads(cookies)
+        
+        if len(cookies) > 0:
+            for cookie in cookies:
+                driver.add_cookie(cookie)
+                
+        sleep(5)
+    
+        driver.get(f"{twitter_url}/settings/account")
+        if len(driver.find_elements_by_name("session[username_or_email]")) >  0:
+            _ = open(cookie_file, 'w').truncate()
+            return False
+        else: 
+            return True
+    
+    return False
+
+def twitter_login(driver):    
+    driver.get(twitter_login_page)
+    
+    if driver.find_elements_by_name("session[username_or_email]") and driver.find_elements_by_name("session[password]"):
+        email = driver.find_element_by_name("session[username_or_email]")
+        email.clear()
+        password = driver.find_element_by_name("session[password]")
+        password.clear()
+
+        email.send_keys(twitter_email)
+        password.send_keys(twitter_password)
+
+        sleep(3)
+        password.submit()
+
+        sleep(5)
+        cookies_list = driver.get_cookies()
+
+        ck_file = open(f"{current_path}/{twitter_cookies_path}", 'w', encoding = 'utf8')
+        ck_file.write(json.dumps(cookies_list))
+        ck_file.close()
+        
+    return True

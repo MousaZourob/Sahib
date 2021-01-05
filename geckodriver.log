@@ -1256,3 +1256,4 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1609884212458	Marionette	INFO	Listening on port 55972
 1609884212747	Marionette	WARN	TLS certificate errors will be ignored for this session
 1609884213280	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1609884626050	Marionette	INFO	Stopped listening on port 55972

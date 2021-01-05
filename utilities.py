@@ -73,7 +73,7 @@ def get_products(driver):
             current_price = current_price.replace('$', '')
             current_price = current_price.replace(',', '')
             if "to" in current_price:
-                current_price = current_price.split('.')
+                current_price = current_price.split(' ')
                 current_price = float(current_price[0])
             current_price = float(current_price)
 
@@ -83,10 +83,17 @@ def get_products(driver):
             old_price = product.find_elements_by_css_selector('div.product-details-container .all-price-sections .pricing-spacer .price-was')[0].text
             old_price = old_price.replace('$', '')
             old_price = old_price.replace("Was ", "")
-            if len(old_price) > 0:
-                old_price = float(old_price)
-            else: 
-                old_price = 0
+            old_price = old_price.replace('\n', '')
+            old_price = old_price.replace(',', '')
+            if "to" in old_price:
+                old_price = old_price.split(' ')
+                old_price = float(old_price[0])
+            
+            if not isinstance(old_price,float):
+                if len(old_price) > 0:
+                    old_price = float(old_price)
+                else: 
+                    old_price = 0
 
         discount_number = 0
         discount_percent = 0

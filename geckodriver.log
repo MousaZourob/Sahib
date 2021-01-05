@@ -1192,3 +1192,67 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1609799768610	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 165: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
 JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 165: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+1609800065970	Marionette	INFO	Stopped listening on port 61480
+1609870432642	geckodriver	INFO	Listening on 127.0.0.1:52667
+1609870435696	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\zourm\\AppData\\Local\\Temp\\rust_mozprofile4XsdEF"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609870439615	Marionette	INFO	Listening on port 52675
+1609870439909	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609870559791	Marionette	INFO	Stopped listening on port 52675
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1609871261221	geckodriver	INFO	Listening on 127.0.0.1:53067
+1609871264250	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\zourm\\AppData\\Local\\Temp\\rust_mozprofileLl3O85"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609871267059	Marionette	INFO	Listening on port 53075
+1609871267411	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609871267955	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1609872775685	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1609874803749	Marionette	INFO	Stopped listening on port 53075
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1609883324031	geckodriver	INFO	Listening on 127.0.0.1:54993
+1609883327109	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\zourm\\AppData\\Local\\Temp\\rust_mozprofileD2BoNM"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609883330953	Marionette	INFO	Listening on port 55002
+1609883331262	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609883380254	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1609883577442	Marionette	INFO	Stopped listening on port 55002
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1609883583175	geckodriver	INFO	Listening on 127.0.0.1:55269
+1609883586243	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\zourm\\AppData\\Local\\Temp\\rust_mozprofileZgwPLz"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609883589060	Marionette	INFO	Listening on port 55277
+1609883589391	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609883598823	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1609883796998	Marionette	INFO	Stopped listening on port 55277
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+"--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\zourm\\AppData\\Local\\Temp\\rust_mozprofileziNPXT"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609883792456	Marionette	INFO	Listening on port 55510
+1609883792742	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609883793216	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1609884209935	Marionette	INFO	Stopped listening on port 55510
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+"--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\zourm\\AppData\\Local\\Temp\\rust_mozprofile3bnS01"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609883881760	Marionette	INFO	Listening on port 55682
+1609883881909	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609883882428	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1609884210739	Marionette	INFO	Stopped listening on port 55682
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+"--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\zourm\\AppData\\Local\\Temp\\rust_mozprofilemupC0s"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609884212458	Marionette	INFO	Listening on port 55972
+1609884212747	Marionette	WARN	TLS certificate errors will be ignored for this session
+1609884213280	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.

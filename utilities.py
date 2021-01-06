@@ -193,7 +193,11 @@ def publish_product(driver, product):
         f"Hurry and grab a {product['discount_percent']}% discount on a {product['product_title']}! {product['product_url']}",
         f"Take ${product['discount_number']} off a {product['product_title']}! {product['product_url']}",
         f"If you need a {product['product_title']} use this {product['discount_percent']}% discount! {product['product_url']}",
-        f"Buy a {product['product_title']} for ${product['current_price']} instead of ${product['old_price']}! {product['product_url']}"
+        f"Buy a {product['product_title']} for ${product['current_price']} instead of ${product['old_price']}! {product['product_url']}",
+        f"Dont overthink it and take a {product['discount_percent']}% discount on a {product['product_title']}! {product['product_url']}",
+        f"Save ${product['discount_number']} on a {product['product_title']} before it's too late! {product['product_url']}",
+        f"You won't have buyer's remorse with this {product['discount_percent']}% discount on a {product['product_title']}! {product['product_url']}",
+        f"Quickly grab a {product['product_title']} for ${product['discount_number']} off! {product['product_url']}"
     ]
     
     message = random.choice(messages)

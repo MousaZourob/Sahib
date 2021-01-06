@@ -191,9 +191,9 @@ def publish_product(driver, product):
     
     messages = [
         f"Hurry and grab a {product['discount_percent']}% discount on a {product['product_title']}! {product['product_url']}",
-        f"Take {product['discount_number']}$ off an {product['product_title']}! {product['product_url']}",
+        f"Take ${product['discount_number']} off a {product['product_title']}! {product['product_url']}",
         f"If you need a {product['product_title']} use this {product['discount_percent']}% discount! {product['product_url']}",
-        f"Buy a {product['product_title']} for {product['current_price']} instead of {product['old_price']}! {product['product_url']}"
+        f"Buy a {product['product_title']} for ${product['current_price']} instead of ${product['old_price']}! {product['product_url']}"
     ]
     
     message = random.choice(messages)

@@ -9,6 +9,8 @@ from selenium.webdriver.firefox.options import Options
 import pymongo
 import os
 
+import random
+
 from datetime import datetime 
 from time import sleep
 
@@ -182,3 +184,34 @@ def twitter_login(driver):
         ck_file.close()
         
     return True
+
+def publish_product(driver, product):
+    
+    driver.get(twitter_url)
+    
+    messages = [
+        f"Hurry and grab a {product['discount_percent']}% discount on a {product['product_title']}! {product['product_url']}",
+        f"Take {product['discount_number']}$ off an {product['product_title']}! {product['product_url']}",
+        f"If you need a {product['product_title']} use this {product['discount_percent']}% discount! {product['product_url']}",
+        f"Buy a {product['product_title']} for {product['current_price']} instead of {product['old_price']}! {product['product_url']}"
+    ]
+    
+    message = random.choice(messages)
+    
+    if len(driver.find_elements_by_xpath('/html/body/div/div/div/div[2]/main/div/div/div/div[1]/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div[1]/div/div/div/div[2]/div')) > 0:
+        tweet_box = driver.find_element_by_xpath('/html/body/div/div/div/div[2]/main/div/div/div/div[1]/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div[1]/div/div/div/div[2]/div')
+
+        tweet_box.send_keys(message)
+
+        if len(driver.find_elements_by_xpath('/html/body/div/div/div/div[2]/main/div/div/div/div[1]/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[4]/div/div/div[2]/div[3]')) > 0:
+            tweet_button = driver.find_element_by_xpath('/html/body/div/div/div/div[2]/main/div/div/div/div[1]/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[4]/div/div/div[2]/div[3]')
+
+            sleep(1)
+
+            tweet_button.click()
+
+            db.products.update_one({'_id': product['_id']}, {'$set': {'published_at': datetime.now()}})
+            
+            return True
+    
+    return False

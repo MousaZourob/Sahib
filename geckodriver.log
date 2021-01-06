@@ -1257,3 +1257,8 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1609884212747	Marionette	WARN	TLS certificate errors will be ignored for this session
 1609884213280	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
 1609884626050	Marionette	INFO	Stopped listening on port 55972
+1609891904882	geckodriver	INFO	Listening on 127.0.0.1:58476
+1609891907917	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\zourm\\AppData\\Local\\Temp\\rust_mozprofilenWbPvT"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609891910673	Marionette	INFO	Listening on port 58484
+1609891911071	Marionette	WARN	TLS certificate errors will be ignored for this session

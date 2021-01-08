@@ -23,7 +23,7 @@ Twitter bot that scrapes Walmart's clearance page using **Python** to find best 
 **5.** This script was turned into a **CRON job** using Windows Task Manager, and it runs automatically once a day to tweet out 5 deals daily
 
 ## Demo:
-* To view the bot in action visit:https://twitter.com/SahibBot_
+* To view the bot in action click [here](https://twitter.com/SahibBot_): 
 ![Demo](https://user-images.githubusercontent.com/66835262/104045431-8c008080-51ac-11eb-9d31-7537516b84c5.png)
 
 

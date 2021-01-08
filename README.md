@@ -14,13 +14,13 @@ Twitter bot that scrapes Wal-mart's clearance page using **Python** to find best
 #### Scraping from Twitter:
 **1.** Using **Geckodriver**, a **Webdriver for Firefox** is created that opens Twitter's log-in page
 <br />
-**2.** The script then checks if cookies for an older log-in exist, and if not logs in maunally
+**2.** The script then checks if **cookies** saved as **JSON** objects for an older log-in exist, and if not logs in maunally
 <br />
 **3.** Afterwards a connection with **MongoDB** is established, and the script finds the first 5 postings that haven't been tweeted yet 
 <br />
-**4.** Using **Selenium** tweets are sent out over a 3 minute period, each with one of 8 template messages to publish new deals
+**4.** Using **Selenium** tweets are sent out over a 3 minute period each with one of 8 template messages to publish new deals, and the posting date is saved in the database to not allow duplicate postings to occur
 <br />
-**5.** This script was turned into a **CRON job**, and it runs automatically once a day to tweet out 5 deals daily
+**5.** This script was turned into a **CRON job** using Windows Task Manager, and it runs automatically once a day to tweet out 5 deals daily
 
 ## Demo:
 * To view the bot in action visit:https://twitter.com/SahibBot_

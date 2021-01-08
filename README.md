@@ -1,11 +1,11 @@
 # Sahib
 ### Overview:
-Twitter bot that scrapes Wal-mart's clearance page using **Python** to find best deals and post them on twitter automatically. The bot scrapes data using the **Selenium framework** for Python, and the data is then stored in a **MongoDB** collection to be tweeted later. Using Windows Task Manager, a **CRON job** was created to tweet 5 deals daily.
+Twitter bot that scrapes Walmart's clearance page using **Python** to find best deals and post them on twitter automatically. The bot scrapes data using the **Selenium framework** for Python, and the data is then stored in a **MongoDB** collection to be tweeted later. Using Windows Task Manager, a **CRON job** was created to tweet 5 deals daily.
 
 ### Data Flow:
 
 #### Scraping from Walmart:
-**1.** Using **Geckodriver**, a **Webdriver for Firefox** is created that opens Wal-mart's clearance page for electronics
+**1.** Using **Geckodriver**, a **Webdriver for Firefox** is created that opens Walmart's clearance page for electronics
 <br />
 **2.** The products are then scrapped using **Selenium**, and data such as the product's title, new and old price, and when it was scrapped is recorded
 <br />

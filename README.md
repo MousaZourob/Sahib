@@ -14,7 +14,7 @@
 #### Scraping from Twitter:
 **1.** Using **Geckodriver**, a **Webdriver for Firefox** is created that opens Twitter's log-in page
 <br />
-**2.** The script then checks if **cookies** saved as **JSON** objects for an older log-in exist, and if not logs in maunally
+**2.** The script then checks if **cookies** saved as **JSON** objects for an older log-in exist, and if not logs in normally
 <br />
 **3.** Afterwards a connection with **MongoDB** is established, and the script finds the first 5 postings that haven't been tweeted
 <br />
@@ -23,7 +23,7 @@
 **5.** This script was turned into a **CRON job** using Windows Task Scheduler, and it runs automatically once a day to tweet out 5 deals daily
 
 ## Demo:
-* To view the bot in action click [here](https://twitter.com/SahibBot_): 
+* To view the bot in action, click [here](https://twitter.com/SahibBot_): 
 ![Demo](https://user-images.githubusercontent.com/66835262/104045431-8c008080-51ac-11eb-9d31-7537516b84c5.png)
 
 
